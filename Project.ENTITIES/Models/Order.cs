@@ -8,7 +8,12 @@ namespace Project.ENTITIES.Models
 {
     public class Order:BaseEntity
     {
-
+        public Order()
+        {
+            OrderExtras = new List<OrderExtra>();
+            Rooms = new List<Room>();
+                
+        }
         public decimal UnitPrice { get; set; }
         public int? CustomerID { get; set; }
 
