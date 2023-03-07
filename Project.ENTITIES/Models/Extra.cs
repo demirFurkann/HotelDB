@@ -15,5 +15,12 @@ namespace Project.ENTITIES.Models
         //Relational propeteis
 
         public virtual List<OrderExtra> OrderExtras { get; set; }
-    }
+
+		public override string ToString()
+		{
+            return $"Yemek İsmi : {Name} \n Fiyatı :{UnitPrice}";
+		}
+
+
+	}
 }

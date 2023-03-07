@@ -41,15 +41,50 @@ namespace Project.WinUI
             {
                 cmbOda.Items.Add(item);
             }
-           
-        }
+			List<Extra> extra = _extraRep.GetAll();
 
+			foreach (Extra item in  extra)
+            {
+                cmbYemek.Items.Add(item);
+            }
+
+
+		}
+        Room _secilen;
         private void cmbOda_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbOda.SelectedIndex>-1)
             {
+                _secilen = lstDoluOda.SelectedItem as Room; 
                 lblOda.Text = (cmbOda.SelectedItem as Room).BilgiGoster();
             }
         }
-    }
+
+		private void btnYemek_Click(object sender, EventArgs e)
+		{
+            
+		}
+
+		private void btnEkle_Click(object sender, EventArgs e)
+		{
+            Customer cst = new Customer();
+            Order ord =new Order();
+
+            cst.FirstName=txtIsim.Text;
+            cst.LastName = txtSoyIsim.Text;
+            _customerRep.Add(cst);
+
+            ord.Rooms.Add(_secilen);
+
+            ord.Customer = cst;
+			_orderRep.Add(ord);
+
+			lstDoluOda.Items.Add(ord);
+
+
+
+            
+
+		}
+	}
 }

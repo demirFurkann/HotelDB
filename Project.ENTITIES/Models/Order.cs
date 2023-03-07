@@ -25,5 +25,17 @@ namespace Project.ENTITIES.Models
         public virtual List<Room> Rooms { get; set; }
 
         public virtual Customer Customer { get; set; }
-    }
+
+
+		public override string ToString()
+		{
+            string isim = null;
+
+            foreach (Room item in Rooms)
+            {
+                isim += item.RoomNo;
+            }
+            return $"{isim}No'lu Odada{Customer.FirstName} İsimli müşteri kalıyor";
+		}
+	}
 }
