@@ -8,6 +8,10 @@ namespace Project.ENTITIES.Models
 {
     public class RoomType:BaseEntity
     {
+        public RoomType()
+        {
+            Rooms = new List<Room>();
+        }
         public string RoomTypeName { get; set; }
 
 

@@ -20,5 +20,11 @@ namespace Project.ENTITIES.Models
         public virtual RoomType RoomType { get; set; }
 
         public virtual Order Order { get; set; }
+
+        
+        public override string ToString()
+        {
+            return $" Oda Adi: {RoomNo} Fiyat: {UnitPrice} Odatipi : {RoomType.RoomTypeName}";
+        }
     }
 }
