@@ -46,7 +46,10 @@ namespace Project.WinUI
 
         private void cmbOda_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+            if (cmbOda.SelectedIndex>-1)
+            {
+                lblOda.Text = (cmbOda.SelectedItem as Room).BilgiGoster();
+            }
         }
     }
 }

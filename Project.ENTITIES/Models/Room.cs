@@ -21,7 +21,10 @@ namespace Project.ENTITIES.Models
 
         public virtual Order Order { get; set; }
 
-        
+        public string BilgiGoster()
+        {
+            return $" Fiyatı:{UnitPrice:C2}\n Odanın tipi: {RoomType.RoomTypeName}";
+        }
         public override string ToString()
         {
             return $" Oda Adi: {RoomNo}";

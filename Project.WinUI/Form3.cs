@@ -16,11 +16,13 @@ namespace Project.WinUI
     {
         RoomRepository _roomRep;
         RoomTypeRepository _roomTypeRep;
+        ExtraRepository _extraRep;
         public Form3()
         {
             InitializeComponent();
             _roomTypeRep = new RoomTypeRepository();
             _roomRep = new RoomRepository();
+            _extraRep = new ExtraRepository();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -48,6 +50,14 @@ namespace Project.WinUI
                 _secilen.RoomType = rt;
                 _roomTypeRep.Add(rt);
             }
+        }
+
+        private void btnYemekEkle_Click(object sender, EventArgs e)
+        {
+            Extra ex = new Extra();
+
+            
+
         }
     }
 }
