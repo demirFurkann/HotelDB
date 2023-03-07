@@ -24,7 +24,7 @@ namespace Project.ENTITIES.Models
         
         public override string ToString()
         {
-            return $" Oda Adi: {RoomNo} Fiyat: {UnitPrice} Odatipi : {RoomType.RoomTypeName}";
+            return $" Oda Adi: {RoomNo}";
         }
     }
 }

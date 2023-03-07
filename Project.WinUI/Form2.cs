@@ -43,5 +43,10 @@ namespace Project.WinUI
             }
            
         }
+
+        private void cmbOda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
     }
 }

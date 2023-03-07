@@ -56,10 +56,11 @@
             // cmbOda
             // 
             this.cmbOda.FormattingEnabled = true;
-            this.cmbOda.Location = new System.Drawing.Point(55, 220);
+            this.cmbOda.Location = new System.Drawing.Point(55, 150);
             this.cmbOda.Name = "cmbOda";
-            this.cmbOda.Size = new System.Drawing.Size(273, 21);
+            this.cmbOda.Size = new System.Drawing.Size(162, 21);
             this.cmbOda.TabIndex = 1;
+            this.cmbOda.SelectedIndexChanged += new System.EventHandler(this.cmbOda_SelectedIndexChanged);
             // 
             // lblOda
             // 
