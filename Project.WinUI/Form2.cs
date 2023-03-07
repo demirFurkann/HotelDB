@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.BLL.GenericRepository.ConcRep;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,10 +13,18 @@ namespace Project.WinUI
 {
     public partial class Form2 : Form
     {
-        
+        CustomerRepository _customerRep;
+
+        OrderRepository _orderRep;
+
+        ExtraRepository _extraRep;
+
+        RoomRepository _roomRep;
+
+        RoomTypeRepository _roomTypeRep;
         public Form2()
         {
-            InitializeComponent();
+            InitializeComponent(); 
         }
     }
 }
