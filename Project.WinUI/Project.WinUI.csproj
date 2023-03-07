@@ -104,6 +104,10 @@
       <Project>{78aea475-2dab-446c-a944-1dad19bf3937}</Project>
       <Name>Project.BLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Project.ENTITIES\Project.ENTITIES.csproj">
+      <Project>{db03b42c-d121-49cf-87a8-ce6a4105721a}</Project>
+      <Name>Project.ENTITIES</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
