@@ -11,6 +11,7 @@ namespace Project.ENTITIES.Models
     {
         public int ID { get; set; }
         public DateTime CreateDate { get; set; }
+
         public DateTime? UpdatedDate { get; set; }
 
         public DateTime? DeletedDate { get; set; }
@@ -21,7 +22,7 @@ namespace Project.ENTITIES.Models
         {
             CreateDate = DateTime.Now;
 
-            Status = DataStatus.Pure;
+            Status = DataStatus.CreatedDate;
         }
     }
 }

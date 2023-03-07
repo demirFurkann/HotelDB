@@ -41,6 +41,7 @@
 			this.btnGiris.TabIndex = 0;
 			this.btnGiris.Text = "Giris";
 			this.btnGiris.UseVisualStyleBackColor = true;
+			this.btnGiris.Click += new System.EventHandler(this.btnGiris_Click);
 			// 
 			// txtKullaniciAdi
 			// 
