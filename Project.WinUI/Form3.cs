@@ -17,12 +17,14 @@ namespace Project.WinUI
 		RoomRepository _roomRep;
 		RoomTypeRepository _roomTypeRep;
 		ExtraRepository _extraRep;
+		EmployeeProfileRepository _empProfileRep;
 		public Form3()
 		{
 			InitializeComponent();
 			_roomTypeRep = new RoomTypeRepository();
 			_roomRep = new RoomRepository();
 			_extraRep = new ExtraRepository();
+			_empProfileRep = new EmployeeProfileRepository();
 		}
 
 		private void button1_Click(object sender, EventArgs e)
@@ -60,6 +62,18 @@ namespace Project.WinUI
 			_extraRep.Add(ex);
 
 
+		}
+
+		private void btnKaydet_Click(object sender, EventArgs e)
+		{
+			EmployeeProfile empProf= new EmployeeProfile();
+
+			empProf.UserName = txtGiris.Text;
+
+			empProf.Password = txtSifre.Text;
+			
+
+			_empProfileRep.Add(empProf);
 		}
 	}
 }

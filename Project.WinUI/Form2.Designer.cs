@@ -45,7 +45,7 @@
 			// txtIsim
 			// 
 			this.txtIsim.Location = new System.Drawing.Point(82, 58);
-			this.txtIsim.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtIsim.Margin = new System.Windows.Forms.Padding(4);
 			this.txtIsim.Name = "txtIsim";
 			this.txtIsim.Size = new System.Drawing.Size(148, 27);
 			this.txtIsim.TabIndex = 0;
@@ -53,7 +53,7 @@
 			// txtSoyIsim
 			// 
 			this.txtSoyIsim.Location = new System.Drawing.Point(82, 124);
-			this.txtSoyIsim.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtSoyIsim.Margin = new System.Windows.Forms.Padding(4);
 			this.txtSoyIsim.Name = "txtSoyIsim";
 			this.txtSoyIsim.Size = new System.Drawing.Size(148, 27);
 			this.txtSoyIsim.TabIndex = 0;
@@ -62,7 +62,7 @@
 			// 
 			this.cmbOda.FormattingEnabled = true;
 			this.cmbOda.Location = new System.Drawing.Point(82, 219);
-			this.cmbOda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.cmbOda.Margin = new System.Windows.Forms.Padding(4);
 			this.cmbOda.Name = "cmbOda";
 			this.cmbOda.Size = new System.Drawing.Size(241, 27);
 			this.cmbOda.TabIndex = 1;
@@ -71,26 +71,27 @@
 			// lblOda
 			// 
 			this.lblOda.BackColor = System.Drawing.SystemColors.ControlLightLight;
-			this.lblOda.Location = new System.Drawing.Point(78, 475);
+			this.lblOda.Location = new System.Drawing.Point(51, 323);
 			this.lblOda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblOda.Name = "lblOda";
 			this.lblOda.Size = new System.Drawing.Size(380, 114);
 			this.lblOda.TabIndex = 2;
+			this.lblOda.Click += new System.EventHandler(this.lblOda_Click);
 			// 
 			// lstDoluOda
 			// 
 			this.lstDoluOda.FormattingEnabled = true;
 			this.lstDoluOda.ItemHeight = 19;
 			this.lstDoluOda.Location = new System.Drawing.Point(432, 58);
-			this.lstDoluOda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.lstDoluOda.Margin = new System.Windows.Forms.Padding(4);
 			this.lstDoluOda.Name = "lstDoluOda";
 			this.lstDoluOda.Size = new System.Drawing.Size(562, 213);
 			this.lstDoluOda.TabIndex = 3;
 			// 
 			// btnEkle
 			// 
-			this.btnEkle.Location = new System.Drawing.Point(82, 630);
-			this.btnEkle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnEkle.Location = new System.Drawing.Point(55, 478);
+			this.btnEkle.Margin = new System.Windows.Forms.Padding(4);
 			this.btnEkle.Name = "btnEkle";
 			this.btnEkle.Size = new System.Drawing.Size(112, 34);
 			this.btnEkle.TabIndex = 4;
@@ -101,7 +102,7 @@
 			// btnCikisYap
 			// 
 			this.btnCikisYap.Location = new System.Drawing.Point(884, 282);
-			this.btnCikisYap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnCikisYap.Margin = new System.Windows.Forms.Padding(4);
 			this.btnCikisYap.Name = "btnCikisYap";
 			this.btnCikisYap.Size = new System.Drawing.Size(112, 34);
 			this.btnCikisYap.TabIndex = 5;
@@ -112,7 +113,7 @@
 			// 
 			this.cmbYemek.FormattingEnabled = true;
 			this.cmbYemek.Location = new System.Drawing.Point(1013, 55);
-			this.cmbYemek.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.cmbYemek.Margin = new System.Windows.Forms.Padding(4);
 			this.cmbYemek.Name = "cmbYemek";
 			this.cmbYemek.Size = new System.Drawing.Size(268, 27);
 			this.cmbYemek.TabIndex = 6;
@@ -120,7 +121,7 @@
 			// btnYemek
 			// 
 			this.btnYemek.Location = new System.Drawing.Point(1088, 95);
-			this.btnYemek.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnYemek.Margin = new System.Windows.Forms.Padding(4);
 			this.btnYemek.Name = "btnYemek";
 			this.btnYemek.Size = new System.Drawing.Size(134, 56);
 			this.btnYemek.TabIndex = 7;
@@ -176,7 +177,7 @@
 			this.Controls.Add(this.txtSoyIsim);
 			this.Controls.Add(this.txtIsim);
 			this.Font = new System.Drawing.Font("Corbel", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "Form2";
 			this.Text = "Form2";
 			this.Load += new System.EventHandler(this.Form2_Load);

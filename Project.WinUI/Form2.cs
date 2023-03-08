@@ -87,5 +87,10 @@ namespace Project.WinUI
             
 
 		}
+
+		private void lblOda_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

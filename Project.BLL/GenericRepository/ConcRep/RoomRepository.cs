@@ -10,5 +10,9 @@ namespace Project.BLL.GenericRepository.ConcRep
 {
 	public class RoomRepository:BaseRepository<Room>
 	{
-	}
+        public RoomRepository()
+        {
+            
+        }
+    }
 }
