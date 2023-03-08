@@ -75,9 +75,9 @@ namespace Project.WinUI
             _customerRep.Add(cst);
 
             
-            ord.Rooms.Add(cmbOda.SelectedItem as Room);
+            //ord.Rooms.Add(cmbOda.SelectedItem as Room);
 
-            ord.Customer = cst;
+            //ord.Customer = cst;
 			_orderRep.Add(ord);
 
 			lstDoluOda.Items.Add(ord);
