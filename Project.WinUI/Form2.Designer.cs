@@ -40,6 +40,8 @@
             this.İsim = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnSiparisEkle = new System.Windows.Forms.Button();
+            this.lblYemekliReservasyon = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtIsim
@@ -86,6 +88,7 @@
             this.lstReservasyon.Name = "lstReservasyon";
             this.lstReservasyon.Size = new System.Drawing.Size(562, 213);
             this.lstReservasyon.TabIndex = 3;
+            this.lstReservasyon.Click += new System.EventHandler(this.lstReservasyon_Click);
             // 
             // btnEkle
             // 
@@ -116,10 +119,11 @@
             this.cmbYemek.Name = "cmbYemek";
             this.cmbYemek.Size = new System.Drawing.Size(268, 27);
             this.cmbYemek.TabIndex = 6;
+            this.cmbYemek.SelectedIndexChanged += new System.EventHandler(this.cmbYemek_SelectedIndexChanged);
             // 
             // btnYemek
             // 
-            this.btnYemek.Location = new System.Drawing.Point(1088, 95);
+            this.btnYemek.Location = new System.Drawing.Point(1218, 95);
             this.btnYemek.Margin = new System.Windows.Forms.Padding(4);
             this.btnYemek.Name = "btnYemek";
             this.btnYemek.Size = new System.Drawing.Size(134, 56);
@@ -158,11 +162,31 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Odalar";
             // 
+            // btnSiparisEkle
+            // 
+            this.btnSiparisEkle.Location = new System.Drawing.Point(1032, 97);
+            this.btnSiparisEkle.Name = "btnSiparisEkle";
+            this.btnSiparisEkle.Size = new System.Drawing.Size(75, 52);
+            this.btnSiparisEkle.TabIndex = 9;
+            this.btnSiparisEkle.Text = "Sipariş Ekle";
+            this.btnSiparisEkle.UseVisualStyleBackColor = true;
+            this.btnSiparisEkle.Click += new System.EventHandler(this.btnSiparisEkle_Click);
+            // 
+            // lblYemekliReservasyon
+            // 
+            this.lblYemekliReservasyon.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblYemekliReservasyon.Location = new System.Drawing.Point(614, 475);
+            this.lblYemekliReservasyon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblYemekliReservasyon.Name = "lblYemekliReservasyon";
+            this.lblYemekliReservasyon.Size = new System.Drawing.Size(380, 114);
+            this.lblYemekliReservasyon.TabIndex = 2;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1365, 738);
+            this.Controls.Add(this.btnSiparisEkle);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.İsim);
@@ -171,6 +195,7 @@
             this.Controls.Add(this.btnCikisYap);
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.lstReservasyon);
+            this.Controls.Add(this.lblYemekliReservasyon);
             this.Controls.Add(this.lblOda);
             this.Controls.Add(this.cmbOda);
             this.Controls.Add(this.txtSoyIsim);
@@ -199,5 +224,7 @@
 		private System.Windows.Forms.Label İsim;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label3;
-	}
+        private System.Windows.Forms.Button btnSiparisEkle;
+        private System.Windows.Forms.Label lblYemekliReservasyon;
+    }
 }

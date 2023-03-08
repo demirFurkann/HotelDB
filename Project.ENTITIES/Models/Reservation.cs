@@ -8,6 +8,10 @@ namespace Project.ENTITIES.Models
 {
 	public class Reservation:BaseEntity
 	{
+        public Reservation()
+        {
+            Orders = new List<Order>();
+        }
         public string ReservationNo { get; set; }
         public decimal UnitPrice { get; set; }
         public int? CustomerID { get; set; }
@@ -25,5 +29,42 @@ namespace Project.ENTITIES.Models
 		public virtual List<ReservationGuest> ReservationGuests { get; set; }
 
 
-	}
+        public string BilgiGoster()
+        {
+            string isim = "";
+            foreach (Order item in Orders)
+            {
+
+                foreach (OrderExtra item1 in item.OrderExtras)
+                {
+                    isim += item1.Extra.MealName;
+                }
+            }
+            if (Orders != null)
+            {
+                return $"{Customer.FirstName}";
+            }
+            return $"{Customer.FirstName} {isim} kişisi kalıyor";
+        }
+        public override string ToString()
+        {
+
+            string isim = "";
+            foreach (Order item in Orders)
+            {
+                
+                foreach (OrderExtra item1 in item.OrderExtras)
+                {
+                     isim += item1.Extra.MealName;
+                }
+            }
+            if (Orders !=null)
+            {
+                return $"{Customer.FirstName}";
+            }
+            return $"{Customer.FirstName} {isim} kişisi kalıyor";
+        }
+
+
+    }
 }
