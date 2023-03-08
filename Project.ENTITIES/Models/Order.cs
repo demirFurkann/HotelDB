@@ -26,8 +26,24 @@ namespace Project.ENTITIES.Models
 
         public void TutarHesapla()
         {
+          // UnitPrice = 0;
+            foreach (OrderExtra extra in OrderExtras)
+            {
+                if (extra != null)
+                {
+                    UnitPrice += extra.Extra.UnitPrice;
+                }
+                
+            }
             
+           
+            
+           
         }
+		public override string ToString()
+		{
+            return $"Toplam Fiyat :{UnitPrice:C2}";
+		}
 
 
 	}
