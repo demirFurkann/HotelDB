@@ -59,7 +59,10 @@
     <Compile Include="Options\GuestMap.cs" />
     <Compile Include="Options\OrderExtraMap.cs" />
     <Compile Include="Options\OrderMap.cs" />
+    <Compile Include="Options\ReservationGuestMap.cs" />
+    <Compile Include="Options\ReservationMap.cs" />
     <Compile Include="Options\RoomMap.cs" />
+    <Compile Include="Options\RoomReservationMap.cs" />
     <Compile Include="Options\RoomTypeMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
