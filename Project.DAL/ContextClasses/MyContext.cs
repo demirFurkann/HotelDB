@@ -25,6 +25,8 @@ namespace Project.DAL.ContextClasses
             modelBuilder.Configurations.Add(new ExtraMap());
             modelBuilder.Configurations.Add(new RoomMap());
             modelBuilder.Configurations.Add(new RoomTypeMap());
+          
+            
         }
 
         public DbSet<Order> Orders { get; set; }

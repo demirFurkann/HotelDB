@@ -57,9 +57,13 @@
     <Compile Include="GenericRepository\ConcRep\EmployeeProfileRepository.cs" />
     <Compile Include="GenericRepository\ConcRep\EmployeeRepository.cs" />
     <Compile Include="GenericRepository\ConcRep\ExtraRepository.cs" />
+    <Compile Include="GenericRepository\ConcRep\GuestRepository.cs" />
     <Compile Include="GenericRepository\ConcRep\OrderExtraRepository.cs" />
     <Compile Include="GenericRepository\ConcRep\OrderRepository.cs" />
+    <Compile Include="GenericRepository\ConcRep\ReservationGuestRepository.cs" />
+    <Compile Include="GenericRepository\ConcRep\ReservationRepository.cs" />
     <Compile Include="GenericRepository\ConcRep\RoomRepository.cs" />
+    <Compile Include="GenericRepository\ConcRep\RoomReservationRepository.cs" />
     <Compile Include="GenericRepository\ConcRep\RoomTypeRepository.cs" />
     <Compile Include="GenericRepository\IntRep\IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
