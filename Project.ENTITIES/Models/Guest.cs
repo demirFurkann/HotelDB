@@ -9,6 +9,7 @@ namespace Project.ENTITIES.Models
 	public class Guest:BaseEntity
 	{
 
+        public string GuestName { get; set; }
 
         //Relationa Properties
 

@@ -56,6 +56,7 @@
     <Compile Include="Options\EmployeeMap.cs" />
     <Compile Include="Options\EmployeeProfileMap.cs" />
     <Compile Include="Options\ExtraMap.cs" />
+    <Compile Include="Options\GuestMap.cs" />
     <Compile Include="Options\OrderExtraMap.cs" />
     <Compile Include="Options\OrderMap.cs" />
     <Compile Include="Options\RoomMap.cs" />

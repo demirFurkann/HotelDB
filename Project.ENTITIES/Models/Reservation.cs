@@ -8,8 +8,8 @@ namespace Project.ENTITIES.Models
 {
 	public class Reservation:BaseEntity
 	{
-
-
+        public string ReservationNo { get; set; }
+        public decimal UnitPrice { get; set; }
         public int? CustomerID { get; set; }
 
         //Relational Properties
