@@ -55,7 +55,7 @@ namespace Project.WinUI
 		private void btnYemekEkle_Click(object sender, EventArgs e)
 		{
 			Extra ex = new Extra();
-			ex.Name = txtYemek.Text;
+			//ex.Name = txtYemek.Text;
 			ex.UnitPrice = Convert.ToDecimal(txtFiyat.Text);
 			_extraRep.Add(ex);
 
