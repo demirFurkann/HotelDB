@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project.MAP.Options
 {
-    public class GuestMap:
+    public class GuestMap
     {
     }
 }
