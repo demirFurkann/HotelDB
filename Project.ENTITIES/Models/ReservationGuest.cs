@@ -6,18 +6,17 @@ using System.Threading.Tasks;
 
 namespace Project.ENTITIES.Models
 {
-	public class Order:BaseEntity
+	public class ReservationGuest:BaseEntity
 	{
+        public int ReservationID { get; set; }
+
+        public int GuestID { get; set; }
 
 
-        public int? ReservationID { get; set; }
-
-        //Relational Properties
+        //Relationa Properties
 
         public virtual Reservation Reservation { get; set; }
 
-		public virtual List<OrderExtra> OrderExtras { get; set; }
-
-
-	}
+        public virtual Guest Guest { get; set; }
+    }
 }

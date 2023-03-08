@@ -1,0 +1,29 @@
+
+
+rezervasyon,order,room,roomType,customer,Employee,Employeeprofile,guest
+
+1Employee             1EmpProfile
+1EmpProfile           1Employee
+
+------------------------------
+1Rezervation    nOrder
+1Order          1Reservation
+------------------------------
+1Order          nExtra
+
+1Extra          nOrder
+-----------------------------
+1Employee      nReservation
+1Reservation    1Employee
+------------------------------
+1Reservation        1Customer
+1Customer           nReservation
+-----------------------------
+1Reservation           nRoom
+1Room                  nReservation
+------------------------------
+1Reservation          nGuest
+1Guest                nReservation
+------------------------------
+1Room            1RoomType
+1RoomType         nRoom

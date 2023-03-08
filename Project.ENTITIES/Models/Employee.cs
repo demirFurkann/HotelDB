@@ -13,11 +13,14 @@ namespace Project.ENTITIES.Models
         public string Department { get; set; }
 
 
+        public int? ReservationID { get; set; }
+
 
         //Relational Properties
-
         public virtual EmployeeProfile EmployeeProfile { get; set; }
 
-        public virtual List<Customer> Customers { get; set; }
+        public virtual Reservation Reservation { get; set; }
+
+
     }
 }

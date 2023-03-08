@@ -6,21 +6,11 @@ using System.Threading.Tasks;
 
 namespace Project.ENTITIES.Models
 {
-    public class Extra:BaseEntity
-    {
-        public string Name { get; set; }
-        public decimal UnitPrice { get; set; }
+	public class Extra:BaseEntity
+	{
 
 
-        //Relational propeteis
-
+        //Relational Properties
         public virtual List<OrderExtra> OrderExtras { get; set; }
-
-		public override string ToString()
-		{
-            return $"Yemek İsmi : {Name} \n Fiyatı :{UnitPrice}";
-		}
-
-
-	}
+    }
 }

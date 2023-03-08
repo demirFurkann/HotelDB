@@ -6,15 +6,18 @@ using System.Threading.Tasks;
 
 namespace Project.ENTITIES.Models
 {
-    public class OrderExtra:BaseEntity
-    {
+	public class OrderExtra:BaseEntity
+	{
         public int OrderID { get; set; }
+
         public int ExtraID { get; set; }
 
-        //Relational prop
+
+        //Relational Properties
 
         public virtual Order Order { get; set; }
 
         public virtual Extra Extra { get; set; }
+
     }
 }

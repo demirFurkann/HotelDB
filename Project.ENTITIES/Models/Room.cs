@@ -13,13 +13,14 @@ namespace Project.ENTITIES.Models
         public decimal UnitPrice { get; set; }
 
         public int? RoomTypeID { get; set; }
-        public int? OrderID { get; set; }
+      
 
         //Relational Properties
 
         public virtual RoomType RoomType { get; set; }
 
-        public virtual Order Order { get; set; }
+        public virtual List<RoomReservation> RoomReservations { get; set; }
+
 
         public string BilgiGoster()
         {

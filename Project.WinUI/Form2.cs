@@ -74,7 +74,8 @@ namespace Project.WinUI
             cst.LastName = txtSoyIsim.Text;
             _customerRep.Add(cst);
 
-            ord.Rooms.Add(_secilen);
+            
+            ord.Rooms.Add(cmbOda.SelectedItem as Room);
 
             ord.Customer = cst;
 			_orderRep.Add(ord);

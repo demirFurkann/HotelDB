@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Project.ENTITIES.Models
 {
-	public class Customer:BaseEntity
+	public class Guest:BaseEntity
 	{
 
 
-        //Relation Properties
+        //Relationa Properties
 
-        public virtual List<Reservation> Reservations{ get; set; }
+        public virtual List<ReservationGuest> ReservationGuests{ get; set; }
     }
 }
