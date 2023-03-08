@@ -14,6 +14,8 @@ namespace Project.ENTITIES.Models
         }
         public string RoomTypeName { get; set; }
 
+        
+
 
 
         //Relational Properties

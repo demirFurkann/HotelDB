@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace Project.ENTITIES.Models
 {
-	public class Reservation:BaseEntity
-	{
+    public class Reservation : BaseEntity
+    {
         public Reservation()
         {
             Orders = new List<Order>();
+            RoomReservations = new List<RoomReservation>();
         }
         public string ReservationNo { get; set; }
         public decimal UnitPrice { get; set; }
@@ -24,22 +25,40 @@ namespace Project.ENTITIES.Models
 
         public virtual Customer Customer { get; set; }
 
-		public virtual List<RoomReservation> RoomReservations { get; set; }
+        public virtual List<RoomReservation> RoomReservations { get; set; }
 
-		public virtual List<ReservationGuest> ReservationGuests { get; set; }
+        public virtual List<ReservationGuest> ReservationGuests { get; set; }
 
 
+
+        public void TutarHesapla()
+        {
+
+
+
+            foreach (Order item in Orders)
+            {
+                UnitPrice = 0;
+            }
+            foreach (Order item in Orders)
+            {
+                UnitPrice += item.UnitPrice;
+            }
+
+
+        }
         public string BilgiGoster()
         {
             string isim = "";
             foreach (Order item in Orders)
             {
 
-                isim += item.OrderNo;
+                isim += $"{item.OrderNo} ,";
             }
+            isim.TrimEnd(',');
             if (Orders != null)
             {
-                return $"{Customer.FirstName} kişisine şu yemek verildi :{isim} ";
+                return $"{Customer.FirstName} kişisine : {isim} ";
             }
             return $"{Customer.FirstName} {Customer.LastName}";
         }
@@ -47,19 +66,25 @@ namespace Project.ENTITIES.Models
         {
 
             string isim = "";
-            foreach (Order item in Orders)
+            if (Orders != null)
             {
-                
-                foreach (OrderExtra item1 in item.OrderExtras)
+                foreach (Order item in Orders)
                 {
-                     isim += item1.Extra.MealName;
+
+                    foreach (OrderExtra item1 in item.OrderExtras)
+                    {
+                        isim += item1.Extra.MealName;
+                    }
                 }
             }
-            if (Orders !=null)
+            string roomNo = "";
+            foreach (RoomReservation item in RoomReservations)
             {
-                return $"{Customer.FirstName}";
+                 roomNo += $"{item.Room.RoomNo} ,";
             }
-            return $"{Customer.FirstName} {isim} kişisi kalıyor";
+            roomNo.TrimEnd(',');
+
+            return $"{roomNo} isimli odada {Customer.FirstName} {Customer.LastName} kalıyor";
         }
 
 

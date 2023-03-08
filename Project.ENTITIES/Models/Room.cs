@@ -12,6 +12,8 @@ namespace Project.ENTITIES.Models
 
         public decimal UnitPrice { get; set; }
 
+       
+
         public int? RoomTypeID { get; set; }
       
 
