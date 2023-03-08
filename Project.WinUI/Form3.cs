@@ -66,14 +66,14 @@ namespace Project.WinUI
 
 		private void btnKaydet_Click(object sender, EventArgs e)
 		{
-			EmployeeProfile empProf= new EmployeeProfile();
+			//EmployeeProfile empProf= new EmployeeProfile();
 
-			empProf.UserName = txtGiris.Text;
+			//empProf.UserName = txtGiris.Text;
 
-			empProf.Password = txtSifre.Text;
+			//empProf.Password = txtSifre.Text;
 			
 
-			_empProfileRep.Add(empProf);
+			//_empProfileRep.Add(empProf);
 		}
 	}
 }
