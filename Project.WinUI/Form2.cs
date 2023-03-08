@@ -22,7 +22,9 @@ namespace Project.WinUI
 
         RoomRepository _roomRep;
 
-        RoomTypeRepository _roomTypeRep;
+        ReservationRepository _reservationRep;
+
+        
         public Form2()
         {
             InitializeComponent(); 
@@ -30,7 +32,7 @@ namespace Project.WinUI
             _extraRep = new ExtraRepository();
             _customerRep = new CustomerRepository();
             _roomRep = new RoomRepository();
-            _roomTypeRep = new RoomTypeRepository();
+            _reservationRep = new ReservationRepository();
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -55,7 +57,7 @@ namespace Project.WinUI
         {
             if (cmbOda.SelectedIndex>-1)
             {
-                _secilen = lstDoluOda.SelectedItem as Room; 
+                _secilen = lstReservasyon.SelectedItem as Room; 
                 lblOda.Text = (cmbOda.SelectedItem as Room).BilgiGoster();
             }
         }
@@ -68,23 +70,18 @@ namespace Project.WinUI
 		private void btnEkle_Click(object sender, EventArgs e)
 		{
             Customer cst = new Customer();
-            Order ord =new Order();
+            Reservation rst = new Reservation();
 
             cst.FirstName=txtIsim.Text;
             cst.LastName = txtSoyIsim.Text;
             _customerRep.Add(cst);
 
             
-            //ord.Rooms.Add(cmbOda.SelectedItem as Room);
-
-            //ord.Customer = cst;
-			_orderRep.Add(ord);
-
-			lstDoluOda.Items.Add(ord);
-
-
-
+            rst.Customer = cst;
             
+            lstReservasyon.Items.Add(rst);
+
+
 
 		}
 	}

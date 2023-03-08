@@ -14,5 +14,10 @@ namespace Project.ENTITIES.Models
 
         //Relational Properties
         public virtual List<OrderExtra> OrderExtras { get; set; }
+
+        public override string ToString()
+        {
+            return $"{MealName}";
+        }
     }
 }
