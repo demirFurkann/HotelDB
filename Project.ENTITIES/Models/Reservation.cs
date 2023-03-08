@@ -35,16 +35,13 @@ namespace Project.ENTITIES.Models
             foreach (Order item in Orders)
             {
 
-                foreach (OrderExtra item1 in item.OrderExtras)
-                {
-                    isim += item1.Extra.MealName;
-                }
+                isim += item.OrderNo;
             }
             if (Orders != null)
             {
-                return $"{Customer.FirstName}";
+                return $"{Customer.FirstName} kişisine şu yemek verildi :{isim} ";
             }
-            return $"{Customer.FirstName} {isim} kişisi kalıyor";
+            return $"{Customer.FirstName}";
         }
         public override string ToString()
         {

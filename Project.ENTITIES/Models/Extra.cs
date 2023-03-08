@@ -8,6 +8,10 @@ namespace Project.ENTITIES.Models
 {
 	public class Extra:BaseEntity
 	{
+        public Extra()
+        {
+            OrderExtras = new List<OrderExtra>();
+        }
         public string MealName { get; set; }
         public decimal UnitPrice { get; set; }
 

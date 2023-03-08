@@ -8,6 +8,10 @@ namespace Project.ENTITIES.Models
 {
 	public class Order:BaseEntity
 	{
+        public Order()
+        {
+            OrderExtras = new List<OrderExtra>();
+        }
         public string OrderNo { get; set; }
 
 
@@ -19,6 +23,11 @@ namespace Project.ENTITIES.Models
         public virtual Reservation Reservation { get; set; }
 
 		public virtual List<OrderExtra> OrderExtras { get; set; }
+
+        public void TutarHesapla()
+        {
+            
+        }
 
 
 	}

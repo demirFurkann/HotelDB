@@ -16,7 +16,7 @@ namespace Project.ENTITIES.Models
         //Relational Properties
 
         public virtual Order Order { get; set; }
-
+        
         public virtual Extra Extra { get; set; }
 
     }

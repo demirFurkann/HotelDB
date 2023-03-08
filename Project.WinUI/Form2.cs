@@ -77,18 +77,25 @@ namespace Project.WinUI
 		private void btnYemek_Click(object sender, EventArgs e)
 		{
             Order o = new Order();
-
+            o.OrderNo = _secilenYemek.MealName;
             o.UnitPrice = _secilenYemek.UnitPrice;
             _orderRep.Add(o);
             _secilenOrder = o;
 
+
+            Extra ex = new Extra();
+            ex.MealName = _secilenYemek.MealName;
+            ex.UnitPrice = _secilenYemek.UnitPrice;
+            
             if (_secilenYemek!=null)
             {
                 OrderExtra oa = new OrderExtra();
-                oa.Extra = _secilenYemek;
-                oa.Order = o;
-                _orderExtraRep.Add(oa);
                 
+                oa.ExtraID = _secilenYemek.ID;
+                oa.OrderID =_secilenOrder.ID;
+
+                _orderExtraRep.Add(oa);
+                _secilenOrderExtra = oa;
                 
             }
 		}
@@ -137,9 +144,11 @@ namespace Project.WinUI
         {
             if (_secilenReservasyon !=null && _secilenOrder !=null)
             {
-                Reservation r = new Reservation();
 
-                r.Orders.Add(_secilenOrder);
+
+                _secilenReservasyon.Orders.Add(_secilenOrder);
+
+                lblYemekliReservasyon.Text = _secilenReservasyon.BilgiGoster();
             }
         }
     }
