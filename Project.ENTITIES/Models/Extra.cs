@@ -8,6 +8,8 @@ namespace Project.ENTITIES.Models
 {
 	public class Extra:BaseEntity
 	{
+        public string MealName { get; set; }
+        public decimal UnitPrice { get; set; }
 
 
         //Relational Properties

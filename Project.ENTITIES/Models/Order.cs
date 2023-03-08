@@ -8,8 +8,10 @@ namespace Project.ENTITIES.Models
 {
 	public class Order:BaseEntity
 	{
+        public string OrderNo { get; set; }
 
 
+        public decimal UnitPrice { get; set; }
         public int? ReservationID { get; set; }
 
         //Relational Properties
