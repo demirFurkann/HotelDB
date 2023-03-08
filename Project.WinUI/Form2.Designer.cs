@@ -86,10 +86,10 @@
 			// 
 			this.lstReservasyon.FormattingEnabled = true;
 			this.lstReservasyon.ItemHeight = 19;
-			this.lstReservasyon.Location = new System.Drawing.Point(432, 58);
+			this.lstReservasyon.Location = new System.Drawing.Point(368, 40);
 			this.lstReservasyon.Margin = new System.Windows.Forms.Padding(4);
 			this.lstReservasyon.Name = "lstReservasyon";
-			this.lstReservasyon.Size = new System.Drawing.Size(562, 213);
+			this.lstReservasyon.Size = new System.Drawing.Size(531, 175);
 			this.lstReservasyon.TabIndex = 3;
 			this.lstReservasyon.Click += new System.EventHandler(this.lstReservasyon_Click);
 			// 
@@ -187,7 +187,7 @@
 			// lblTotalFiyat
 			// 
 			this.lblTotalFiyat.BackColor = System.Drawing.SystemColors.ControlLight;
-			this.lblTotalFiyat.Location = new System.Drawing.Point(473, 302);
+			this.lblTotalFiyat.Location = new System.Drawing.Point(473, 282);
 			this.lblTotalFiyat.Name = "lblTotalFiyat";
 			this.lblTotalFiyat.Size = new System.Drawing.Size(153, 42);
 			this.lblTotalFiyat.TabIndex = 10;
@@ -206,7 +206,7 @@
 			// label1
 			// 
 			this.label1.AutoSize = true;
-			this.label1.Location = new System.Drawing.Point(419, 312);
+			this.label1.Location = new System.Drawing.Point(410, 297);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(48, 19);
 			this.label1.TabIndex = 12;

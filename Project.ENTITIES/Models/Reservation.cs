@@ -41,7 +41,7 @@ namespace Project.ENTITIES.Models
             {
                 return $"{Customer.FirstName} kişisine şu yemek verildi :{isim} ";
             }
-            return $"{Customer.FirstName}";
+            return $"{Customer.FirstName} {Customer.LastName}";
         }
         public override string ToString()
         {

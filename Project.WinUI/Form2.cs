@@ -151,7 +151,7 @@ namespace Project.WinUI
 				
 				_secilenOrder.TutarHesapla();
 				lblTotalFiyat.Text = _secilenOrder.ToString();
-				//Todo : ilk seferde 1x yerine 2 x hesaplayip ardından 2 x hesaplamaya devam ediyor..
+				//Todo : ilk seferde 1x yerine 2 x hesaplayip ardından 1 x hesaplamaya devam ediyor..
 			}
 			
 			
@@ -168,9 +168,11 @@ namespace Project.WinUI
 				{
 					toplamTutar += _secilenOrder.UnitPrice;
 				}
-				// Todo :  Burada database ekleme yapıcaz
+				
 			}
 			lblTotalFiyat.Text = $"{toplamTutar:C2}";
 		}
+
+		
 	}
 }
