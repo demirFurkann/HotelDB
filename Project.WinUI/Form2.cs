@@ -24,7 +24,16 @@ namespace Project.WinUI
 
         ReservationRepository _reservationRep;
 
-        
+        OrderExtraRepository _orderExtraRep;
+
+        //SEçilenler
+
+        Room _secilenOda;
+        Extra _secilenYemek;
+        Order _secilenOrder;
+        Reservation _secilenReservasyon;
+        OrderExtra _secilenOrderExtra;
+
         public Form2()
         {
             InitializeComponent(); 
@@ -33,6 +42,8 @@ namespace Project.WinUI
             _customerRep = new CustomerRepository();
             _roomRep = new RoomRepository();
             _reservationRep = new ReservationRepository();
+            _orderExtraRep = new OrderExtraRepository();
+
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -52,19 +63,34 @@ namespace Project.WinUI
 
 
 		}
-        Room _secilen;
+        
         private void cmbOda_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbOda.SelectedIndex>-1)
             {
-                _secilen = lstReservasyon.SelectedItem as Room; 
+
+                _secilenOda = cmbOda.SelectedItem as Room;
                 lblOda.Text = (cmbOda.SelectedItem as Room).BilgiGoster();
             }
         }
 
 		private void btnYemek_Click(object sender, EventArgs e)
 		{
-            
+            Order o = new Order();
+
+            o.UnitPrice = _secilenYemek.UnitPrice;
+            _orderRep.Add(o);
+            _secilenOrder = o;
+
+            if (_secilenYemek!=null)
+            {
+                OrderExtra oa = new OrderExtra();
+                oa.Extra = _secilenYemek;
+                oa.Order = o;
+                _orderExtraRep.Add(oa);
+                
+                
+            }
 		}
 
 		private void btnEkle_Click(object sender, EventArgs e)
@@ -78,7 +104,7 @@ namespace Project.WinUI
 
             
             rst.Customer = cst;
-            
+            rst.UnitPrice = _secilenOda.UnitPrice;
             lstReservasyon.Items.Add(rst);
 
 
@@ -89,5 +115,32 @@ namespace Project.WinUI
 		{
 
 		}
-	}
+
+        private void cmbYemek_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbYemek.SelectedIndex >-1)
+            {
+                _secilenYemek = cmbYemek.SelectedItem as Extra;
+            }
+        }
+
+        private void lstReservasyon_Click(object sender, EventArgs e)
+        {
+            if (lstReservasyon.SelectedIndex>-1)
+            {
+                _secilenReservasyon = lstReservasyon.SelectedItem as Reservation;
+                lblYemekliReservasyon.Text = (lstReservasyon.SelectedItem as Reservation).BilgiGoster();
+            }
+        }
+
+        private void btnSiparisEkle_Click(object sender, EventArgs e)
+        {
+            if (_secilenReservasyon !=null && _secilenOrder !=null)
+            {
+                Reservation r = new Reservation();
+
+                r.Orders.Add(_secilenOrder);
+            }
+        }
+    }
 }
